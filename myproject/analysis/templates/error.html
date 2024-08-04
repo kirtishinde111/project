@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oops!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+        .error-container {
+            text-align: center;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .error-title {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #e74c3c;
+        }
+        .error-message {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .error-action {
+            font-size: 16px;
+        }
+        .error-action a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .error-action a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-title">oops!</div>
+        <div class="error-message">{{ message }}</div>
+        <div class="error-action">
+            <a href="{% url 'analysis:upload_file' %}">Go back to upload page</a>
+        </div>
+    </div>
+</body>
+</html>
